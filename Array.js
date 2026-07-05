@@ -25,14 +25,14 @@
 /*----------------------------------------------------- */
 
 //Length Property
-    let arr = [1, 2, 3, 4, 5];
-    console.log(arr.length); // 5
+    let arr5 = [1, 2, 3, 4, 5];
+    console.log(arr5.length); // 5
 
 /*----------------------------------------------------- */
 
 // Add Elements
 // push() → End me add karta hai
-    let arr = [1, 2, 3];
+    arr = [1, 2, 3];
     arr.push(4);
     console.log(arr); // [1,2,3,4]
 
@@ -63,18 +63,21 @@
 // Original array ko change nahi karta.
 
 let a = [10, 20, 30, 40, 50];
-console.log(arr.slice(1, 4)); // slice(1,4) => from index 1 to 3 => output = [20,30,40]
+console.log(a.slice(1, 4)); // slice(1,4) => from index 1 to 3 => output = [20,30,40]
 
 // splice() => use to remove elements from Array in range of given Index
 
 // *Original array ko modify karta hai.
 
     let b = [10, 20, 30, 40, 50];
-    arr.splice(1, 2); // splice(1,2)=> Remove 2 elements from start index 1  from Array
+    b.splice(1, 2); // splice(1,2)=> Remove 2 elements from start index 1  from Array
     //1 = start index
     //2 = kitne elements remove karne hain
-    console.log(arr); // [10,40,50]
+    console.log(b); // [10,40,50]
 
+//Use of splice() to insert elements
+    b.splice(1,0,"Raja","Sumit",142); //From index 1,remove 0 element => means insert elements ,if given.
+    console.log(`Insert elements using splice() : ${b}`);
 //-----------------------------------------------------------
 //Array ko reverse kar deta hai.
 
