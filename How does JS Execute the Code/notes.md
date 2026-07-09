@@ -58,3 +58,31 @@ Execution contexts ko manage karta hai.
 ## Temporal Dead Zone
 
 Declaration aur initialization ke beech ka region.
+##
+
+````
+In short any code we write 
+
+Goes through 
+
+Global Execution Context (GEC) is created.
+
+GEC has two phases:
+Memory Creation Phase (variables/functions allocated memory)
+Code Execution Phase (line-by-line execution)
+
+JavaScript executes synchronous code in the Call Stack.
+
+When it encounters async operations (setTimeout, fetch, DOM events, etc.), they are handed to Web APIs.
+
+After completion:
+Promises (then, catch, finally, await) go to the Microtask Queue.
+setTimeout, setInterval, DOM events go to the Task/Macrotask Queue.
+
+Event Loop continuously checks:
+Is the Call Stack empty?
+
+Yes → Execute all Microtasks.
+Then execute one Macrotask.
+Repeat.
+````
