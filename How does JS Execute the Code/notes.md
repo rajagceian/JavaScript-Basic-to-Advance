@@ -84,5 +84,6 @@ Is the Call Stack empty?
 
 Yes → Execute all Microtasks.
 Then execute one Macrotask.
+{Priority of Microtask Queue is higher than Task queue}
 Repeat.
 ````
