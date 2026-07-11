@@ -33,7 +33,15 @@ class Car{
     printThis(){
         console.log(this);
     }
+
+    // Regular method — prototype pe baithta hai, this call-time pe decide 
+    // hota hai
     printModel(){
+        console.log(this.model);
+    }
+
+    // Arrow class field — instance pe baithta hai, this permanently bound
+    printModelArrow=()=>{
         console.log(this.model);
     }
 }
@@ -46,6 +54,12 @@ carB.printModel();
 carA.printThis();
 carB.printThis();//this ki value depend karti hai "function KAISE CALL hua",
                    // na ki "kahan DEFINE hua"
+const d1 = carA.printModel;
+d1(); //  ❌ undefined/error — `this` lost ho gaya
+
+const d1 = carA.printModelArrow;
+d1(); //✅ "Raja" — this safe hai
+
 
 //********** 
     console.log(typeof Car); //function (*Not Class)
