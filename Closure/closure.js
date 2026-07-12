@@ -1,4 +1,6 @@
-//======== Closure => JS me closure ek function ke andar ek aur function hota hai jo outer function ke variable ko access kar sakta hai. Closure ka use hum private variable create karne ke liye karte hai. =========//
+//======== Closure => JS me closure ek function ke andar ek aur function hota hai 
+// jo outer function ke variable ko access kar sakta hai. Closure ka use hum private
+//  variable create karne ke liye karte hai. =========//
     function outer() {
         let count = 0;
 
